@@ -1,0 +1,35 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class GameBoard()
+{
+    JFrame frame;
+
+    JPanel board[][];
+
+  public GameBoard()
+  {
+    frame = new JFrame("Othello");
+    frame.setSize(500, 500);
+    frame.setLayout(new GridLayout(8, 8))
+    board[][] = new JPanel[8][8]
+  }
+
+  public void makeBoard()
+  {
+    for(int i = 0; i < 8; i++)
+    {
+      for(int j = 0; j < 8; i++)
+      {
+        board[i][j] = new JPanel();
+        
+        if ((i + j) % 2 == 0)
+        {
+          board[i][j].setBackground(Color.pink);
+          board[i][j].setBackground(Color.gray);
+        }
+      }
+    }
+    frame.setVisible(true);
+  }
+}
