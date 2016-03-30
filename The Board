@@ -5,14 +5,13 @@ public class GameBoard()
 {
     JFrame frame;
 
-    JPanel board[][];
+    JPanel board[][] = new JPanel[8][8];
 
   public GameBoard()
   {
     frame = new JFrame("Othello");
     frame.setSize(500, 500);
     frame.setLayout(new GridLayout(8, 8))
-    board[][] = new JPanel[8][8]
   }
 
   public void makeBoard()
